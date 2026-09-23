@@ -17,7 +17,7 @@
 
       if (rota === "inicio") mostrarInicio();
       if (rota === "cadastro") mostrarCadastro();
-      if (rota === "lista") mostrarLista();
+      if (rota === "carrinho") mostrarCarrinho();
       if (rota === "sobre") mostrarSobre();
     }
 
@@ -25,12 +25,7 @@
       app.innerHTML = `
         <h1>Sistema de Cadastro de Produtos</h1>
         <p>
-          Este é um exemplo simples de SPA feita com HTML, CSS e JavaScript.
-          A navegação acontece sem recarregar a página.
-        </p>
-
-        <p>
-          Os produtos cadastrados ficam temporariamente guardados em um array JavaScript.
+         Seja bem vindo à Loja Prada. Fique a vontade para cadastrar o seus produtos, ver o seu carrinho e a quantidade de produtos que foram colocadas nele.
         </p>
 
         <div class="contador">
@@ -47,7 +42,7 @@
         .addEventListener("click", () => irPara("cadastro"));
 
       document.querySelector("#btnVerAlunos")
-        .addEventListener("click", () => irPara("lista"));
+        .addEventListener("click", () => irPara("carrinho"));
     }
 
     function mostrarCadastro() {
@@ -95,10 +90,10 @@
       });
     }
 
-    function mostrarLista() {
+    function mostrarCarrinho() {
       app.innerHTML = `
-        <h1>Lista de produtos cadastrados</h1>
-        <p>Esta tabela é criada dinamicamente pelo JavaScript a partir do array de produtos.</p>
+        <h1>Carrinho de Produtos Cadastrados</h1>
+        <p>Aqui ficam os produtos que você adiciononou ao carrinho.</p>
         <div id="conteudoLista"></div>
       `;
 
@@ -161,16 +156,9 @@
       app.innerHTML = `
         <h1>Sobre o projeto</h1>
         <p>
-          Este exemplo foi criado para demonstrar uma Single Page Application simples.
+          Este site foi criado por João Augusto Ferreira da Paixão Santos. Este site tem como objetivo simular uma Loja simples onde dá pra cadastrar os seus produtos e depois ver o seu carrinho. 
         </p>
-        <p>
-          Existe apenas um arquivo HTML. Ao clicar nas opções do menu,
-          o JavaScript modifica o conteúdo do elemento <strong>#app</strong>.
-        </p>
-        <p>
-          O projeto também demonstra cadastro em array, manipulação do DOM,
-          eventos de clique, envio de formulário, listagem e exclusão.
-        </p>
+       
       `;
     }
 

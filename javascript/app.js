@@ -1,8 +1,4 @@
-
-    // Os dados ficam apenas na memória.
-    // Se a página for atualizada, eles serão apagados.
     const produtos = [];
-
     const app = document.querySelector("#app");
     const botoesMenu = document.querySelectorAll("nav button");
 
@@ -14,28 +10,29 @@
 
     function irPara(rota) {
       marcarMenuAtivo(rota);
+      if (rota === "logo-inicio") mostrarInicio();
 
       if (rota === "inicio") mostrarInicio();
+
       if (rota === "cadastro") mostrarCadastro();
+
       if (rota === "carrinho") mostrarCarrinho();
+      
       if (rota === "sobre") mostrarSobre();
     }
 
     function mostrarInicio() {
       app.innerHTML = `
-        <h1>Sistema de Cadastro de Produtos</h1>
-        <p>
-         Seja bem vindo à Loja Prada. Fique a vontade para cadastrar o seus produtos, ver o seu carrinho e a quantidade de produtos que foram colocadas nele.
-        </p>
-
-        <div class="contador">
-          Produtos cadastrados nesta sessão: <strong>${produtos.length}</strong>
-        </div>
-
-        <div class="acoes">
-          <button class="botao" id="btnCadastrar">Cadastrar produto</button>
-          <button class="botao secundario" id="btnVerAlunos">Ver produtos</button>
-        </div>
+        <section class="banner">
+        <div class="banner-conteudo">
+          <h1>Bem vindo à Loja Prada </h1>
+          <p> Cadastre os seus produtos e veja o seu carrinho de compras.</p>
+          <div class="acoes">
+            <button class="botao" id="btnCadastrar">Cadastrar produto</button>
+            <button class="botao secundario" id="btnVerAlunos">Ver produtos</button>
+          </div>
+          </div>
+          </section>
       `;
 
       document.querySelector("#btnCadastrar")
@@ -93,7 +90,7 @@
     function mostrarCarrinho() {
       app.innerHTML = `
         <h1>Carrinho de Produtos Cadastrados</h1>
-        <p>Aqui ficam os produtos que você adiciononou ao carrinho.</p>
+        <p>Aqui ficam os produtos que você adicionou ao carrinho.</p>
         <div id="conteudoLista"></div>
       `;
 

@@ -35,7 +35,7 @@
     nav button.ativo {
       background: Transparent;
       border-color: rgb(0, 0, 0);
-      color:rgba(91, 87, 87, 0.263);
+      color:rgba(248, 246, 246, 0.704);
     }
 
     .banner{
@@ -43,7 +43,7 @@
 
       display:flex;align-items:end;margin-bottom:35px;
 
-      background-color: #12329c;
+      background:linear-gradient(to top,#0429996b 5%,rgba(8, 66, 136, 0.55),rgba(16, 16, 45, 0.05)), url(../imagens/desktop-250px.png);
       background-size:cover;
       background-position:center;
     }
